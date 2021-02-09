@@ -1,0 +1,4 @@
+name: foundry
+type: profile
+description: 'Foundry is based on over 2 decades of experience and is a reasoned starting point that scales well for small and enterprise projects.'
+core_version_requirement: '^8 || ^9'
