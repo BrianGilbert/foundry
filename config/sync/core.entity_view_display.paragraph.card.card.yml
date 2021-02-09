@@ -10,8 +10,8 @@ dependencies:
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
+    - advanced_text_formatter
     - linky
-    - text
 id: paragraph.card.card
 targetEntityType: paragraph
 bundle: card
@@ -36,11 +36,34 @@ content:
     type: linky_label
     region: content
   field_text_formatted:
-    type: text_default
+    type: advanced_text
     weight: 2
     region: content
     label: above
-    settings: {  }
+    settings:
+      trim_length: '160'
+      ellipsis: '1'
+      word_boundary: '1'
+      filter: input
+      format: plain_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      use_summary: 0
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
   field_title:
     type: string

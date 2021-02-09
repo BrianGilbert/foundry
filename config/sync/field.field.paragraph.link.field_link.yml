@@ -16,7 +16,7 @@ field_name: field_link
 entity_type: paragraph
 bundle: link
 label: Link
-description: ''
+description: 'Select ''Content'' to link to internal content and start to type the title, or ''Managed Link'' to create an external link.'
 required: false
 translatable: false
 default_value: {  }
@@ -32,6 +32,7 @@ settings:
         page: page
       sort:
         field: _none
+        direction: ASC
       auto_create: false
       auto_create_bundle: blog
   linky:
@@ -40,9 +41,13 @@ settings:
       target_bundles: null
       sort:
         field: _none
+        direction: ASC
       auto_create: true
   content_moderation_state:
     handler: 'default:content_moderation_state'
+    handler_settings: {  }
+  crop:
+    handler: 'default:crop'
     handler_settings: {  }
   block_content:
     handler: 'default:block_content'
@@ -76,8 +81,5 @@ settings:
     handler_settings: {  }
   scheduled_transition:
     handler: 'default:scheduled_transition'
-    handler_settings: {  }
-  crop:
-    handler: 'default:crop'
     handler_settings: {  }
 field_type: dynamic_entity_reference

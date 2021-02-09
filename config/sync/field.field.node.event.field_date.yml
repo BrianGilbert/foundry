@@ -12,7 +12,7 @@ field_name: field_date
 entity_type: node
 bundle: event
 label: Date
-description: ''
+description: 'Enter the date and time this event will ocurr.'
 required: true
 translatable: false
 default_value: {  }

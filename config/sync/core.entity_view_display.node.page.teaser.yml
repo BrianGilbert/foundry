@@ -12,7 +12,7 @@ dependencies:
     - field.field.node.page.field_image
     - node.type.page
   module:
-    - text
+    - advanced_text_formatter
     - user
 id: node.page.teaser
 targetEntityType: node
@@ -20,11 +20,34 @@ bundle: page
 mode: teaser
 content:
   field_description:
-    type: text_default
+    type: advanced_text
     weight: 0
     region: content
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: '160'
+      ellipsis: '1'
+      word_boundary: '1'
+      filter: input
+      format: plain_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      use_summary: 0
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
 hidden:
   content_moderation_control: true

@@ -12,7 +12,7 @@ dependencies:
     - field.field.node.blog.field_image
     - node.type.blog
   module:
-    - text
+    - advanced_text_formatter
     - user
 id: node.blog.card
 targetEntityType: node
@@ -22,9 +22,32 @@ content:
   field_description:
     weight: 1
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: '160'
+      ellipsis: '1'
+      word_boundary: '1'
+      filter: input
+      format: plain_text
+      allowed_html:
+        - a
+        - b
+        - br
+        - dd
+        - dl
+        - dt
+        - em
+        - i
+        - li
+        - ol
+        - p
+        - strong
+        - u
+        - ul
+      use_summary: 0
+      token_replace: 0
+      autop: 0
     third_party_settings: {  }
-    type: text_default
+    type: advanced_text
     region: content
   field_image:
     weight: 0
@@ -35,14 +58,10 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  links:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_approver: true
   field_blog_category: true
   field_content: true
   field_content_supplementary: true
   langcode: true
+  links: true

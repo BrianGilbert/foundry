@@ -19,7 +19,7 @@ field_name: field_content_supplementary
 entity_type: node
 bundle: news
 label: 'Supplementary content'
-description: ''
+description: 'Items added typically display visually separated from the primary content of the page.'
 required: false
 translatable: false
 default_value: {  }
@@ -52,9 +52,6 @@ settings:
       link:
         enabled: true
         weight: -17
-      link_external:
-        weight: -13
-        enabled: false
       media:
         enabled: true
         weight: -16
