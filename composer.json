@@ -41,7 +41,7 @@
         "drupal/length_indicator": "^1.1",
         "drupal/linky": "^1.0@alpha",
         "drupal/linky_revision_ui": "^2.127",
-        "drupal/linkychecker": "^1.0@alpha",
+        "drupal/linkychecker": "^2.0@beta",
         "drupal/linkyreplacer": "^2.0",
         "drupal/masquerade": "^2.0@beta",
         "drupal/maxlength": "^1.0@RC",
